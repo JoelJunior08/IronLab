@@ -19,8 +19,10 @@
 }
 
 .card img{
-    width: 220px;
-    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
     flex-direction: column;
     align-items: center;
 }

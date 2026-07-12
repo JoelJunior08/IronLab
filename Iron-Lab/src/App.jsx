@@ -1,12 +1,13 @@
-import Header from "./components/Header/Header";
-import CardsGrid from "./components/CardsGrid/CardsGrid";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import GrupoMuscular from "./Pages/GrupoMuscular";
 
 function App() {
   return (
-    <>
-      <Header />
-      <CardsGrid />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/grupo/:nome" element={<GrupoMuscular />}/>
+    </Routes>
   );
 }
 
