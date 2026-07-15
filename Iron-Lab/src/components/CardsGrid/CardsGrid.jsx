@@ -26,7 +26,7 @@ function CardsGrid() {
             <Card 
                 titulo="Abdômen" 
                 imagem={abdomen}
-                link="/grupo/abdomen"
+                link="/grupo/abdominais"
             />
             <Card 
                 titulo="Bíceps" 
@@ -41,12 +41,12 @@ function CardsGrid() {
             <Card 
                 titulo="Ombro" 
                 imagem={ombro}
-                link="/grupo/ombro"
+                link="/grupo/ombros"
             />
             <Card 
                 titulo="Perna" 
                 imagem={perna}
-                link="/grupo/perna"
+                link="/grupo/pernas"
             />
             <Card 
                 titulo="Mobilidade" 
