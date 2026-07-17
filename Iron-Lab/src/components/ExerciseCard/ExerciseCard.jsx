@@ -9,11 +9,11 @@ function ExerciseCard({ exercicio }) {
         <div className="exercise-card">
 
             <h2>{exercicio.name}</h2>
-            <p>Categoria: {exercicio.category}</p>
+            <p><b>Categoria:</b> {exercicio.category}</p>
 
-            <p>Equipamento: {exercicio.equipment}</p>
+            <p><b>Equipamento:</b> {exercicio.equipment}</p>
 
-            <h3>Músculos primários</h3>
+            <h3><b>Músculo primário</b></h3>
 
             <ul>
                 {exercicio.primaryMuscles.map((musculo, index) => (
@@ -23,7 +23,7 @@ function ExerciseCard({ exercicio }) {
 
             {exercicio.secondaryMuscles.length > 0 && (
                 <>
-                    <h3>Músculos secundários</h3>
+                    <h3><b>Músculos secundários</b></h3>
                     <ul>
                         {exercicio.secondaryMuscles.map((musculo, index) => (
                             <li key={index}>{musculo}</li>

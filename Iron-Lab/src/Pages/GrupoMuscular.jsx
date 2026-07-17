@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { buscarExercicios } from "../Services/api";
 import ExerciseCard from "../components/ExerciseCard/ExerciseCard";
+import "./GrupoMuscular.css"
+import Header from "../components/Header/Header";
 
 function GrupoMuscular(){
 
@@ -18,16 +20,20 @@ function GrupoMuscular(){
     console.log(exercicios)
 
     return (
-        <div className="grupo-container">
-            <h1>Exercícios de {nome}</h1>
+        <>
+            <Header />
+            
+            <h1 className="titulo">Exercícios de {nome}</h1>
 
-            {exercicios.map((exercicio) => (
-                <ExerciseCard 
-                    key={exercicio.id}
-                    exercicio={exercicio}
-                />
-            ))}
-        </div>
+            <div className="exercicios">
+                {exercicios.map((exercicio) => (
+                    <ExerciseCard 
+                        key={exercicio.id}
+                        exercicio={exercicio}
+                    />
+                ))}
+            </div>
+        </>
     );
 }
 

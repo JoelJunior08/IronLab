@@ -7,14 +7,18 @@
 .cabecalho-titulo{
     display: flex;
     justify-content: center;
-    font-family: fantasy;
+    font-family: var(--fonteTitulo);
     font-style: oblique;
     font-size: clamp(40px, 8vw, 84px);
     letter-spacing: 4px;
     margin: 10px 0 2px;
     align-items: center;
-    background-color: #222222;
-    color: aliceblue;
+    background-color: var(--fundo);
+    color: var(--letra);
+}
+
+.cabecalho-titulo a{
+    color: #E53935;
 }
 
 .cabecalho-titulo img{
@@ -47,8 +51,14 @@
     text-align: center;
     margin-top: 15px;
     margin-bottom: 25px;
-    color: #221515;
+    color: var(--letraSec);
     font-size: 1.1rem;
+}
+
+.cabecalho-legenda{
+    background-color: var(--fundo);
+
+
 }
 
 .cabecalho-legenda nav{
@@ -59,12 +69,14 @@
     font-weight: 600;
 }
 
-.cabecalho-legenda a{
+.link{
     cursor: pointer;
     transition: .3s;
+    text-decoration: none;
+    color: var(--letra);
 }
 
-.cabecalho-legenda a:hover{
+.link:hover{
     color: #E53935;
 }
 

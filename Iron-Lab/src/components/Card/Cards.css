@@ -3,7 +3,7 @@
     height: 180px;
 
     background: #1f1f1f;
-    color: white;
+    color: aliceblue;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@
     align-items: center;
     transition: .3s;
     margin: 15px;
+    text-decoration: none;
 }
 
 .card:hover{

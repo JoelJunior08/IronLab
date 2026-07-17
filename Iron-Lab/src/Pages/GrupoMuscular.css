@@ -1,0 +1,19 @@
+.titulo{
+    color: black;
+    text-align: center;
+    font-family: var(--fonteTitulo);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.exercicios{
+    display: flex;
+    color: var(--letra);
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+    
+    
+
+}
