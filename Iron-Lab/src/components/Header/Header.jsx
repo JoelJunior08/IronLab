@@ -8,7 +8,7 @@ function Header() {
         <header className='cabecalho'>
             <div className="cabecalho-login">
                 <a>Login</a>
-                <a>Cadastre-se</a>
+                <Link to={'/cadastro'}>Cadastre-se</Link>
             </div>
             <h1 className='cabecalho-titulo'><strong><a>Iron</a>Lab </strong><img src={logo} alt="Logo"/></h1>
             <p className="cabecalho-lema">Seu guia completo de exercícios para cada grupo muscular!</p>

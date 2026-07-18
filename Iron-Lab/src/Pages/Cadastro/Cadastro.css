@@ -1,0 +1,47 @@
+.cadastro{
+    color: var(--letraSec);
+    font-family: var(--fonteTitulo);
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+    background: var(--fundo-login);
+    border-radius: 19px;
+
+}
+.cadastro form{
+    max-width: 900px;
+    margin: 40px auto;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 18px;
+}
+
+.cadastro input{
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 16px;
+    
+}
+.cadastro button{
+    grid-column: 1 / -1;
+    padding: 7px;
+    border: none;
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--letra);
+    font-size: 16px;
+    cursor: pointer;
+}
+.cadastro button:hover{
+    color: #E53935;
+}
+.form{
+    grid-column: span 2;
+}
+.form-nome{
+    grid-column: span 3;
+}
