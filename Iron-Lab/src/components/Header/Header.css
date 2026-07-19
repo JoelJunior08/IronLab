@@ -4,20 +4,80 @@
     margin: 0 auto;
 }
 
+/* ---------- LOGIN ---------- */
+
+.cabecalho-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+    font-family: var(--fonteTitulo);
+}
+
+.cabecalho-login a{
+    text-decoration: none;
+    color: var(--letraSec);
+    transition: .3s;
+    font-size: .95rem;
+}
+
+.cabecalho-login a:hover{
+    color: #E53935;
+}
+
+.cabecalho-login span{
+    color: var(--letraSec);
+    font-weight: bold;
+}
+
+.botao-sair{
+    background: var(--card);
+    color: var(--letra);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botao-sair:hover{
+    color: #E53935;
+}
+
+/* ---------- LOGO ---------- */
+
+.logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:visited{
+    color: inherit;
+}
+
 .cabecalho-titulo{
     display: flex;
     justify-content: center;
+    align-items: center;
+
     font-family: var(--fonteTitulo);
     font-style: oblique;
     font-size: clamp(40px, 8vw, 84px);
     letter-spacing: 4px;
+
     margin: 10px 0 2px;
-    align-items: center;
-    background-color: var(--fundo);
+
+    background: var(--fundo);
     color: var(--letra);
 }
 
-.cabecalho-titulo a{
+.cabecalho-titulo strong{
     color: #E53935;
 }
 
@@ -26,57 +86,40 @@
     height: auto;
 }
 
-.cabecalho-titulo span{
-    color: #E53935;
-}
-
-.cabecalho-login{
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    font-size: .9rem;
-    color: #0c0a0a;
-    margin-bottom: 20px;
-}
-
-.cabecalho-login span{
-    cursor: pointer;
-}
-
-.cabecalho-login span:hover{
-    color: #E53935;
-}
+/* ---------- LEMA ---------- */
 
 .cabecalho-lema{
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin: 15px 0 25px;
     color: var(--letraSec);
     font-size: 1.1rem;
 }
 
+/* ---------- MENU ---------- */
+
 .cabecalho-legenda{
-    background-color: var(--fundo);
-
-
+    background: var(--fundo);
 }
 
 .cabecalho-legenda nav{
     display: flex;
     justify-content: center;
     gap: 100px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 8px 0;
 }
 
 .link{
-    cursor: pointer;
-    transition: .3s;
     text-decoration: none;
     color: var(--letra);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: .3s;
 }
 
 .link:hover{
     color: #E53935;
 }
 
+.link:visited{
+    color: var(--letra);
+}

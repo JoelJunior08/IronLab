@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { buscarCep } from "../../Services/viacep";
 import Header from "../../components/Header/Header";
-import "./Cadastro.css"
+import "./Cadastro.css";
 
 export default function Cadastro() {
+
     const [form, setForm] = useState({
         nome: "",
         email: "",
@@ -15,7 +16,7 @@ export default function Cadastro() {
         numero: "",
         senha: "",
         confirmarSenha: "",
-    })
+    });
 
     function handleChange(e) {
         setForm({
@@ -29,12 +30,13 @@ export default function Cadastro() {
             const endereco = await buscarCep(form.cep);
 
             setForm((prev) => ({
-                ...prev, 
+                ...prev,
                 estado: endereco.uf,
                 cidade: endereco.localidade,
                 bairro: endereco.bairro,
-                rua: endereco.logradouro
+                rua: endereco.logradouro,
             }));
+
         } catch (erro) {
             alert(erro.message);
         }
@@ -51,17 +53,30 @@ export default function Cadastro() {
             !form.senha ||
             !form.confirmarSenha
         ) {
-            alert("Preencha todos os campos obrigatórios!.")
+            alert("Preencha todos os campos obrigatórios!");
             return;
         }
 
         if (form.senha !== form.confirmarSenha) {
-            alert("As senhas não coincidem !.")
+            alert("As senhas não coincidem!");
+            return;
         }
 
-        alert("Cadastro realizado com sucesso!.");
+        const usuario = {
+            nome: form.nome,
+            email: form.email,
+            cep: form.cep,
+            estado: form.estado,
+            cidade: form.cidade,
+            bairro: form.bairro,
+            rua: form.rua,
+            numero: form.numero,
+            senha: form.senha,
+        };
 
-        console.log(form);
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+
+        alert("Cadastro realizado com sucesso!");
 
         setForm({
             nome: "",
@@ -82,9 +97,11 @@ export default function Cadastro() {
             <Header />
 
             <main className="cadastro">
+
                 <h1>Cadastro</h1>
 
                 <form onSubmit={handleSubmit}>
+
                     <input
                         className="form-nome"
                         type="text"
@@ -115,24 +132,24 @@ export default function Cadastro() {
                     <input
                         type="text"
                         name="estado"
-                        placeholder="Estado"
                         value={form.estado}
+                        placeholder="Estado"
                         readOnly
                     />
 
                     <input
                         type="text"
                         name="cidade"
-                        placeholder="Cidade"
                         value={form.cidade}
+                        placeholder="Cidade"
                         readOnly
                     />
 
                     <input
                         type="text"
                         name="bairro"
-                        placeholder="Bairro"
                         value={form.bairro}
+                        placeholder="Bairro"
                         readOnly
                     />
 
@@ -146,7 +163,6 @@ export default function Cadastro() {
                     />
 
                     <input
-                        className="form-num"
                         type="text"
                         name="numero"
                         placeholder="Número"
@@ -165,15 +181,19 @@ export default function Cadastro() {
                     <input
                         type="password"
                         name="confirmarSenha"
-                        placeholder="Confirmar Senha"
+                        placeholder="Confirmar senha"
                         value={form.confirmarSenha}
                         onChange={handleChange}
                     />
 
-                    <button type="submit">Criar Conta</button>
+                    <button type="submit">
+                        Criar Conta
+                    </button>
+
                 </form>
 
             </main>
+
         </>
-    )
+    );
 }
