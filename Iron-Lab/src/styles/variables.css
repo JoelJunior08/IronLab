@@ -1,0 +1,16 @@
+:root{
+    --fundo: #222222;
+    --fundoGeral: aliceblue;
+    --letra: aliceblue;
+    --card: #1f1f1f;
+    --letraSec: rgb(0, 0, 0);
+    --fundo-login: #404040;
+
+    --fonteTitulo: fantasy;
+}
+[data-theme="dark"]{
+    --fundo: #111c35;
+    --card: #1E40AF;
+    --lema: aliceblue;
+    --fundoGeral: #0b0b1b;
+}

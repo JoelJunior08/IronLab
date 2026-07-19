@@ -1,0 +1,48 @@
+.login{
+    color: var(--letraSec);
+    font-family: var(--fonteTitulo);
+    text-align: center;
+    letter-spacing: 1px;
+    font-style: italic;
+    background: var(--fundo-login);
+    border-radius: 19px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.login h1{
+    margin-bottom: 25px;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 16px;
+}
+
+.login button{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--letra);
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login button:hover{
+    color: #E53935;
+    transform: translateY(-2px);
+}

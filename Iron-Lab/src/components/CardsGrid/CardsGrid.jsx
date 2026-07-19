@@ -1,17 +1,58 @@
 import Card from "../Card/Cards";
 import "./CardsGrid.css"
+import peito from "../../assets/peito.png"
+import costas from "../../assets/costas.png"
+import abdomen from "../../assets/abdomen.png"
+import biceps from "../../assets/biceps.png"
+import triceps from "../../assets/triceps.png"
+import ombro from "../../assets/ombro.png"
+import perna from "../../assets/perna.png"
+import mobilidade from "../../assets/mobilidade.png"
 
 function CardsGrid() {
 
     return(
         <section className="cards-grid">
-            <Card titulo="Costas"></Card>
-            <Card titulo="Peito"></Card>
-            <Card titulo="Abdômen"></Card>
-            <Card titulo="Bíceps"></Card>
-            <Card titulo="Tríceps"></Card>
-            <Card titulo="Ombro"></Card>
-
+            <Card 
+                titulo="Peito" 
+                imagem={peito}
+                link="/grupo/peito"
+            />
+            <Card 
+                titulo="Costas" 
+                imagem={costas}
+                link="/grupo/costas"
+            />
+            <Card 
+                titulo="Abdômen" 
+                imagem={abdomen}
+                link="/grupo/abdominais"
+            />
+            <Card 
+                titulo="Bíceps" 
+                imagem={biceps}
+                link="/grupo/biceps"
+            />
+            <Card 
+                titulo="Tríceps" 
+                imagem={triceps}
+                link="/grupo/triceps"
+            />
+            <Card 
+                titulo="Ombro" 
+                imagem={ombro}
+                link="/grupo/ombros"
+            />
+            <Card 
+                titulo="Perna" 
+                imagem={perna}
+                link="/grupo/pernas"
+            />
+            <Card 
+                titulo="Mobilidade" 
+                imagem={mobilidade}
+                link="/grupo/mobilidade"
+            />
         </section>
     )
 }
