@@ -8,7 +8,7 @@ import "./styles/globals.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/IronLab'>
       <App />
     </BrowserRouter>
   </StrictMode>
