@@ -1,0 +1,10 @@
+.contato{
+    background-color: var(--card);
+    padding: 15px;
+    text-align: center;
+    font-size: 19px;
+}
+.nome{
+    font-weight: bold;
+    font-size: 30px;
+}

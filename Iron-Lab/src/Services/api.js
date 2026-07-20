@@ -1,6 +1,6 @@
 export async function buscarExercicios(grupo) {
 
-    const resposta = await fetch("/exercises.json");
+    const resposta = await fetch(`${import.meta.env.BASE_URL}exercises.json`);
     const dados = await resposta.json();
 
     const grupos = {

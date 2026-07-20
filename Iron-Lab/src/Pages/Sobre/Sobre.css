@@ -1,0 +1,35 @@
+.sobre{
+    text-align: center;
+    color: var(--letra);
+    background-color: var(--card);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.titulo{
+    text-transform: uppercase;
+    font-family: var(--fonteTitulo);
+    font-style: italic;
+}
+.sobre h1{
+    color: aliceblue;
+}
+.sobre p{
+    font-size: 17px;
+}
+.link {
+    text-decoration: none;
+    color: var(--letra);
+    transition: .3s;
+}
+
+.link:visited {
+    color: var(--letra);
+}
+
+.link:hover {
+    color: #E53935;
+}
+.creditos{
+    font-weight: bold;
+}

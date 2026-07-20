@@ -1,6 +1,7 @@
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Sobre from "../../Pages/Sobre/Sobre";
 
 function Header() {
 
@@ -59,9 +60,12 @@ function Header() {
 
             <h1 className="cabecalho-titulo">
 
-                <Link to="/IronLab" className="logo-link">
+                <Link to="/" className="logo-link">
                     <strong>Iron</strong>Lab
-                    <img src="/logo.png" alt="Logo" />
+                    <img
+                        src={`${import.meta.env.BASE_URL}logo.png`}
+                        alt="Logo"
+                    />
                 </Link>
 
             </h1>
@@ -74,19 +78,19 @@ function Header() {
 
                 <nav>
 
-                    <Link className="link" to="/IronLab">
+                    <Link className="link" to="/">
                         Início
                     </Link>
 
-                    <Link className="link" to="/IronLab">
+                    <Link className="link" to="/">
                         Dicas de Treinos
                     </Link>
 
-                    <Link className="link" to="/IronLab">
+                    <Link className="link" to="/sobre">
                         Sobre
                     </Link>
 
-                    <Link className="link" to="/IronLab">
+                    <Link className="link" to="/contato">
                         Contato
                     </Link>
 
