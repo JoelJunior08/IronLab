@@ -2,9 +2,11 @@ import { useState } from "react";
 import { buscarCep } from "../../Services/viacep";
 import Header from "../../components/Header/Header";
 import "./Cadastro.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
 
+    const navigate = useNavigate();
     const [form, setForm] = useState({
         nome: "",
         email: "",
@@ -78,18 +80,9 @@ export default function Cadastro() {
 
         alert("Cadastro realizado com sucesso!");
 
-        setForm({
-            nome: "",
-            email: "",
-            cep: "",
-            estado: "",
-            cidade: "",
-            bairro: "",
-            rua: "",
-            numero: "",
-            senha: "",
-            confirmarSenha: "",
-        });
+        setTimeout(() => {
+            navigate("/login");
+        }, 500);
     }
 
     return (
