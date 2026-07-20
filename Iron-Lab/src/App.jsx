@@ -7,7 +7,7 @@ import Login from "./Pages/Login/Login";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/IronLab" element={<Home />} />
       <Route path="/grupo/:nome" element={<GrupoMuscular />}/>
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/login" element={<Login />} />

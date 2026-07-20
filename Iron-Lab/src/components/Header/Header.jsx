@@ -1,7 +1,6 @@
 import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import logo from "../../assets/logo.png"
 
 function Header() {
 
@@ -60,9 +59,9 @@ function Header() {
 
             <h1 className="cabecalho-titulo">
 
-                <Link to="/" className="logo-link">
+                <Link to="/IronLab" className="logo-link">
                     <strong>Iron</strong>Lab
-                    <img src={logo} alt="Logo" />
+                    <img src="/logo.png" alt="Logo" />
                 </Link>
 
             </h1>
@@ -75,19 +74,19 @@ function Header() {
 
                 <nav>
 
-                    <Link className="link" to="/">
+                    <Link className="link" to="/IronLab">
                         Início
                     </Link>
 
-                    <Link className="link" to="/">
+                    <Link className="link" to="/IronLab">
                         Dicas de Treinos
                     </Link>
 
-                    <Link className="link" to="/">
+                    <Link className="link" to="/IronLab">
                         Sobre
                     </Link>
 
-                    <Link className="link" to="/">
+                    <Link className="link" to="/IronLab">
                         Contato
                     </Link>
 
